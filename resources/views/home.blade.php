@@ -7,6 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    @dump($trains);
+    <h1>treni in partenza oggi : </h1>
+    @foreach ($trains as $train)
+  
+    <h1>{{$train->agency}}</h1>
+    <h2>data: {{$train->date}}</h2>
+    <h3>partenza da : {{$train->departureStation}}</h3>
+    <h3>arrivo a : {{$train->arrivalStation}}</h3>
+    <h4>ora partenza : {{$train->departureTime}}</h4>
+    <h4>ora : {{$train->arrivalTime}}</h4>
+    @endforeach
 </body>
 </html>
