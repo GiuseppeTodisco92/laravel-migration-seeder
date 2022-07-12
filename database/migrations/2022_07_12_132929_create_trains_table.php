@@ -23,7 +23,7 @@ class CreateTrainsTable extends Migration
             $table->time('arrivalTime', 0);
             $table->unsignedSmallInteger('trainCode');
             $table->unsignedTinyInteger('wagonNumber');
-            $table->dateTime('inTime');
+            $table->boolean('inTime')->default(0);
             $table->boolean('cancelled')->default(0);
             $table->timestamps('');
         });
